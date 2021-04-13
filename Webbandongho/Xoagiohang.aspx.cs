@@ -9,8 +9,11 @@ namespace Webbandongho
 {
     public partial class Xoagiohang : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            int soluot = Convert.ToInt32(Application["sogiohang"]);
+
             string deletedProductID = Request.QueryString.Get("id");
             string deletedProductIDInCookies = deletedProductID + ",";
             string cartCookies = Request.Cookies["cart"].Value;
@@ -20,6 +23,7 @@ namespace Webbandongho
             Response.Cookies["cart"].Value = newCookiesAfterDeletedProduct;
             Response.Cookies["cart"].Expires = DateTime.Now.AddDays(12);
             Response.Redirect("Giohang.aspx");
+            soluot--;
         }
     }
 }

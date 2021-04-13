@@ -16,15 +16,12 @@
 				<a href="Dangnhap.aspx" title="Đăng nhập">Đăng nhập</a>
 			</div>	
 		</div>
+
 		<div class="header_mid">
 			<a href="index.html">
 				<img width="200" height="80" src="images/logo.png" title="Đồng Hồ"/>
 			</a>
-            <div class="timkiem">
-				<input type="text" placeholder="Nhập sản phẩm..." name="sanpham" value=""/>
-				<input type="submit" name="submit" value="Tìm"/>
-			</div>
-		</div>
+            </div>
 		<div class="header_bot">
 			<ul>
 				<li><a href="Trangchu.aspx">Trang chủ</a></li>
@@ -158,6 +155,74 @@
             else {
                 setSuccessFor(email);
             }
+        }
+        //Check pass Mật khẩu phải có số và ký tự thường và ký tự in hoa
+        function numberPassword(password) {
+            var numbers = /[0-9]/g;
+            if (password.value.match(numbers)) {
+                return true;
+            }
+            else return false;
+        }
+        function charactersPassword(password) {
+            var characters = /[a-z]/g;
+            if (password.value.match(characters)) {
+                return true;
+            }
+            else return false;
+        }
+        function CharactersPassword(password) {
+            var Characters = /[A-Z]/g;
+            if (password.value.match(Characters)) {
+                return true;
+            }
+            else return false;
+        }
+        password.onblur = password.oninput = function () {
+            if (!numberPassword(password)||!charactersPassword(password)||!CharactersPassword(password)) {
+                setErrorFor(password, "Mật khẩu phải có số, ký tự thường và ký tự in hoa ");
+            }
+            else {
+                setSuccessFor(password);
+            }
+        }*/
+        // Ký tự đầu là ký tự in hoa
+        /*function checkpass(password) {
+            var Characters = /[A-Z]/g;
+            var a = password.value.charAt(0);
+            if (a.match(Characters)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        }
+        password.onblur = password.oninput = function () {
+            if (!checkpass(password)) {
+                setErrorFor(password, "Ký tự đầu phải là ký tự in hoa ");
+            }
+            else {
+                setSuccessFor(password);
+            }
+        }*/
+        ///^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/ 8 ký tự 1hoa 1 thường 1 ddbiet  1 số
+        /* Tối thiểu 7-15 ký tự 1 in thường, 1 số 1 ký tự đb
+        function checkpass(password) {
+            if (password.value.match(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+            password.onblur = password.oninput = function () {
+                if (!checkpass(password)) {
+                setErrorFor(password, "Mật khẩu phải có số, ký tự thường và ký tự in hoa ");
+            }
+            else {
+                setSuccessFor(password);
+            }
         }*/
 
         // Check trùng password 
@@ -215,4 +280,3 @@
         }
     </script>
 </html>
-

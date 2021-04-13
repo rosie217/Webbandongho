@@ -21,12 +21,6 @@
 			<a href="Trangchu.aspx">
 				<img width="200" height="80" src="images/logo.png" title="Đồng Hồ">
 			</a>
-			<div class="timkiem">
-				
-						<input type="text" placeholder="Nhập sản phẩm..." name="sanpham" value=""/>
-						<input type="submit" name="submit" value="Tìm"/>
-					
-				</div>
 		</div>
 		<div class="header_bot" id="header-bot">
 			<ul>
@@ -42,6 +36,7 @@
 	</div>
 
 	<div class="main">
+		<p class="sogiohang" id="sogiohang" runat="server"></p>
 		<div class="cart_product">
 			<table class="bang">
 						<tr>

@@ -21,12 +21,6 @@
 			<a href="Trangchu.aspx">
 				<img width="200" height="80" src="images/logo.png" title="Đồng Hồ">
 			</a>
-					<div class="timkiem">
-				
-						<input type="text" placeholder="Nhập sản phẩm..." name="sanpham" value=""/>
-						<input type="submit" name="submit" value="Tìm"/>
-					
-				</div>
 		</div>
 		<div class="header_bot" id="header-bot">
 			<ul>
@@ -46,7 +40,6 @@
 				<h2>Mona Watch</h2>
 				<h1>Đồng hồ Classio</h1>
 				<p>Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ…</p>
-				<button>XEM SẢN PHẨM</button>
 		</div>
 		<img id="img" src="images/banner-1.jpg" width="auto">
 	</div>
@@ -77,12 +70,9 @@
 							<p id="gia1"><%# Eval("Price") %> đồng</p>
 						</div>
 					</a>
-					
-						</div>
+					</div>
 				</ItemTemplate>
 			</asp:ListView>
-
-		
 	</div>
 	<div class="dongho_1">
 		<div class="left_dongho1">

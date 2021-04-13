@@ -18,12 +18,6 @@
 			<a href="index.html">
 				<img width="200" height="80" src="images/logo.png" title="Đồng Hồ">
 			</a>
-			<div class="timkiem">
-				
-						<input type="text" placeholder="Nhập sản phẩm..." name="sanpham" value=""/>
-						<input type="submit" name="submit" value="Tìm"/>
-					
-				</div>
 		</div>
 		<div class="header_bot">
 			<ul>
@@ -32,7 +26,7 @@
 				<li><a href="donghonam.aspx">Đồng hồ nam</a></li>
 				<li><a href="donghonu.aspx">Đồng hồ nữ</a></li>
 				<li><a href="Lienhe.aspx">Liên hệ</a></li>
-				<li><a href="Giohang.html">Giỏ hàng</a></li>
+				<li><a href="Giohang.aspx">Giỏ hàng</a></li>
 			</ul>
 		</div>
 	</div>

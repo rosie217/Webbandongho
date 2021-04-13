@@ -13,8 +13,12 @@ namespace Webbandongho
         {
             if (Session["username"] != null)
             {
+                int soluot = Convert.ToInt32(Application["sogiohang"]);
+                
+                
                 login.InnerHtml = "<p class='user'>Xin chào " + Session["username"].ToString() + " | " + "</p>" +
                                   "<a href = 'Dangxuat.aspx'> Đăng xuất </a>";
+                
                 if (Request.Cookies["cart"] != null)
                 {
                     List<Product> cartList = new List<Product>();
@@ -25,10 +29,13 @@ namespace Webbandongho
                         foreach (Product product in productList)
                         {
                             if (product.Id == productID)
-                            {
+                            {   
+                                soluot ++;
                                 cartList.Add(product);
+                                
                             }
                         }
+                        //sogiohang.InnerHtml = "<p> Số sản phẩm trong giỏ hàng là: " + soluot +"</p>";
                     }
                     ListViewCart.DataSource = cartList;
                     ListViewCart.DataBind();
